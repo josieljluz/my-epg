@@ -1,0 +1,23 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="TVAparecida.br" tvg-name="TV Aparecida" tvg-logo="https://i.imgur.com/kxrja0X.png" group-title="Brasil",TV Aparecida
+https://cdn.jmvstream.com/w/LVW-9716/LVW9716_HbtQtezcaw/playlist.m3u8
+#EXTINF:-1 tvg-id="Band.br" tvg-name="Band" tvg-logo="https://i.imgur.com/1r5T6Pw.png" group-title="Brasil",Band
+http://45.190.28.50/BAND_HD/index.m3u8
+#EXTINF:-1 tvg-id="TVCancaoNova.br" tvg-name="TV Cancao Nova" tvg-logo="https://i.imgur.com/OaM9hkH.png" group-title="Brasil",TV Cancao Nova
+http://45.162.64.114/CANCAO_NOVA/index.m3u8
+#EXTINF:-1 tvg-id="TVCultura.br" tvg-name="TV Cultura" tvg-logo="https://i.ibb.co/nm0jXMM/cultura-3x.png" group-title="Brasil",TV Cultura
+http://45.162.64.114/TV_CULTURA/index.m3u8
+#EXTINF:-1 tvg-id="Futura.br" tvg-name="Futura" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Canal_Futura.png/960px-Canal_Futura.png" group-title="Brasil",Futura
+http://168.197.104.22/FUTURA/index.m3u8
+#EXTINF:-1 tvg-id="TVGazeta.br" tvg-name="TV Gazeta" tvg-logo="https://i.imgur.com/0sksWse.png" group-title="Brasil",TV Gazeta
+http://45.162.64.114/GAZETA/index.m3u8
+#EXTINF:-1 tvg-id="TVGloboRiodeJaneiro.br" tvg-name="TV Globo Rio de Janeiro" group-title="Brasil",TV Globo Rio de Janeiro
+http://45.190.28.50/GLOBO_HD/index.m3u8
+#EXTINF:-1 tvg-id="Record.br" tvg-name="Record" tvg-logo="https://i.imgur.com/sz9gTTr.png" group-title="Brasil",Record
+http://45.190.28.50/RECORD/index.m3u8
+#EXTINF:-1 tvg-id="RedeBrasil.br" tvg-name="Rede Brasil" tvg-logo="https://i.imgur.com/TXJKwzZ.png" group-title="Brasil",Rede Brasil
+https://redebrasil.nuvemplay.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="RedeGospel.br" tvg-name="Rede Gospel" tvg-logo="https://i.imgur.com/mttSwgO.png" group-title="Brasil",Rede Gospel
+https://cdn.live.br1.jmvstream.com/w/LVW-8719/LVW8719_AcLVAxWy5J/playlist.m3u8
+#EXTINF:-1 tvg-id="RedeVida.br" tvg-name="Rede Vida" tvg-logo="https://i.imgur.com/mP1qfp2.png" group-title="Brasil",Rede Vida
+http://45.190.28.50/REDE_VIDA_HD/index.m3u8
