@@ -1,1 +1,59 @@
-
+[
+  {
+    "name": "TV Brasil",
+    "id": "TVBrasil.br",
+    "tvg_id": "TVBrasil.br",
+    "tvg_name": "TV Brasil",
+    "group": "Brasil",
+    "aliases": [
+      "TV Brasil",
+      "TVBrasil",
+      "TV Brasil HD"
+    ]
+  },
+  {
+    "name": "TV Câmara",
+    "id": "TVCamara.br",
+    "tvg_id": "TVCamara.br",
+    "tvg_name": "TV Câmara",
+    "group": "Brasil",
+    "aliases": [
+      "TV Câmara",
+      "TV Camara"
+    ]
+  },
+  {
+    "name": "TV Senado",
+    "id": "TVSenado.br",
+    "tvg_id": "TVSenado.br",
+    "tvg_name": "TV Senado",
+    "group": "Brasil",
+    "aliases": [
+      "TV Senado",
+      "TVSenado"
+    ]
+  },
+  {
+    "name": "SBT",
+    "id": "SBT.br",
+    "tvg_id": "SBT.br",
+    "tvg_name": "SBT",
+    "group": "Brasil",
+    "aliases": [
+      "SBT",
+      "SBT HD"
+    ]
+  },
+  {
+    "name": "Globo SP",
+    "id": "GloboSP.br",
+    "tvg_id": "GloboSP.br",
+    "tvg_name": "Globo SP",
+    "group": "Brasil",
+    "aliases": [
+      "Globo SP",
+      "Globo São Paulo",
+      "Globo SP HD"
+    ]
+  }
+]
