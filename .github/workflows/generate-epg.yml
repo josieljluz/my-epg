@@ -1,1 +1,109 @@
+name: 📺 Gerar EPG IPTV
 
+on:
+
+  workflow_dispatch:
+
+  schedule:
+    # A cada 6 horas
+    - cron: "0 */6 * * *"
+
+  push:
+    paths:
+      - "scripts/**"
+      - "config/**"
+      - ".github/workflows/**"
+      - "requirements.txt"
+
+permissions:
+  contents: write
+
+jobs:
+
+  generate:
+
+    name: 🚀 Gerar XMLTV
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # ----------------------------------------------------
+      # Checkout
+      # ----------------------------------------------------
+
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      # ----------------------------------------------------
+      # Python
+      # ----------------------------------------------------
+
+      - name: 🐍 Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      # ----------------------------------------------------
+      # Dependências
+      # ----------------------------------------------------
+
+      - name: 📦 Instalar dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # ----------------------------------------------------
+      # Gerar EPG
+      # ----------------------------------------------------
+
+      - name: 📺 Gerar EPG
+        env:
+          DAYS_AHEAD: "3"
+          REQUEST_TIMEOUT: "30"
+          REQUEST_DELAY: "0.5"
+          MIN_PROGRAMS: "1"
+          LOG_LEVEL: "INFO"
+        run: |
+          python scripts/epg_generator.py
+
+      # ----------------------------------------------------
+      # Verificar arquivos
+      # ----------------------------------------------------
+
+      - name: 🔎 Verificar saída
+        run: |
+          echo "Arquivos gerados:"
+          ls -lh output/
+
+          echo
+          echo "Tamanho do XML:"
+          wc -c output/epg.xml
+
+          echo
+          echo "Programas:"
+          grep -c "<programme " output/epg.xml || true
+
+          echo
+          echo "Canais:"
+          grep -c "<channel " output/epg.xml || true
+
+      # ----------------------------------------------------
+      # Commit
+      # ----------------------------------------------------
+
+      - name: 💾 Commit EPG
+        run: |
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add output/
+
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração no EPG."
+          else
+            git commit -m "📺 Atualizar EPG IPTV"
+            git push
+          fi
